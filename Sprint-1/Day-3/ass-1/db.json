@@ -1,18 +1,13 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "LEARN-REACT",
-      "status": false
-    },
-    {
       "title": "Watch Movie",
-      "status": false,
+      "status": true,
       "id": 2
     },
     {
       "title": "REDUX-THUNK",
-      "status": false,
+      "status": true,
       "id": 3
     }
   ]
