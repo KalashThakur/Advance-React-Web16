@@ -2,6 +2,7 @@ import React from 'react';
 import { Login } from '../Component/Login';
 import {useDispatch, useSelector} from "react-redux";
 import { loginFailure, loginSuccess } from '../Redux/auth/action';
+import { Navigate } from "react-router-dom";
 
 export const LoginPage = () => {
 
