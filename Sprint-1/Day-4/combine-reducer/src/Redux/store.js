@@ -9,4 +9,4 @@ const rootReducer = combineReducers( {
     app: todoReducer
 } )
 
-export const store = legacy_createStore(rootReducer);
+export const store = legacy_createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION_ || window.__REDUX_DEVTOOLS_EXTENSION__());
