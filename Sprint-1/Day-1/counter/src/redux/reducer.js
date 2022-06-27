@@ -1,4 +1,3 @@
-import { decrement_count, increment_count } from './action'
 import { DECREMENT, INCREMENT, RESET } from './actionTypes'
 
 let initState = { count: 0}

@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "LEARN REDUX-THUNK",
+      "status": false
+    },
+    {
+      "title": "DEV TOOLS",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Masai School",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Dispatch actions",
+      "status": false,
+      "id": 4
+    }
+  ]
+}
