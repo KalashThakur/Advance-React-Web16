@@ -1,32 +1,32 @@
-import React from "react";
-import { useState } from "react";
+import axios from 'axios';
+import React, { useState } from 'react'
 import { useDispatch } from "react-redux";
-import { addTodoError, addTodoRequest, addTodoSuccesst } from "../Redux/action";
-import axios from "axios";
+import { addTodoError, addTodoRequest, addTodoSuccesst, getTodo } from '../Redux/action';
 
-export const TodoInput = ({ getTodos }) => {
-  const [title, setTitle] = useState("");
-  const dispatch = useDispatch();
+export const TodoInput = () => {
 
-  const handleAdd = () => {
-    const payload = { title, status: false };
-    setTitle("");
-    dispatch(addTodoRequest());
-    axios
-      .post("/todos", payload)
-      .then((res) => dispatch(addTodoSuccesst(res.data)))
-      .then(() => getTodos())
-      .catch((err) => dispatch(addTodoError(err)));
-  };
+    const [todo, setTodo] = useState("");
+    const dispatch = useDispatch()
+
+    const addTodo = (payload) => {
+        dispatch(addTodoRequest());
+        axios.post("/todos", payload)
+        .then((res) => dispatch(addTodoSuccesst(res.data)))
+        .then(() => dispatch(getTodo))
+        .catch((err) => dispatch(addTodoError(err)))
+    }
+    const handleAdd = () => {
+        if(todo) {
+            const payload = {title: todo, status: false}
+            addTodo(payload);
+            setTodo("")
+        }
+    }
 
   return (
     <div>
-      <input
-        value={title}
-        type="text"
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <button onClick={handleAdd}>Add</button>
+        <input type="text" placeholder='add something...' value={todo} onChange={(e) => setTodo(e.target.value)} />
+        <button onClick={handleAdd}>Add</button>
     </div>
-  );
-};
+  )
+}
