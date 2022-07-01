@@ -30,6 +30,7 @@ export const Books = () => {
         </BookListWrapper>
       </BookPageWrapper>
     </div>
+    
   );
 };
 
@@ -43,11 +44,11 @@ const FilterSortWrapper = styled.div`
 `;
 
 const BookListWrapper = styled.div`
-  width: 300px;
+  width: 100%;
   border: 3px solid black;
   display: grid;
   margin-left: 200px;
-  grid-template-columns: repeat(auto-fit, minmax(310px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(310px, max-content)); //fit for every sce
   grid-gap: 16px;
   justify-content: center;
   padding: initial;
