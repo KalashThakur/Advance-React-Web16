@@ -3,9 +3,7 @@ import React from 'react'
 import { useFetch } from '../Hooks/useFetch';
 
 export const Github = () => {
-    const {data, loading, error} = useFetch(
-        "https://api.github.com/search/users?q=Masai"
-    )
+    const {data, loading, error} = useFetch("https://api.github.com/search/users?q=Masai")
 
 
    
