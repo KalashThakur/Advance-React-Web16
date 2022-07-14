@@ -1,12 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import {Box} from "@chakra-ui/react"
+import {Box, Container, extendTheme} from "@chakra-ui/react";
+import { Form } from './Components/Form';
+import { Layouts } from './Components/Layouts';
+
+
+
+
 
 function App() {
   return (
-    <Box>
-      
-    </Box>
+    <Container border="1px solid red" maxWidth="2xl" >
+      {/* <Form/> */}
+      <Layouts />
+    </Container>
   );
 }
 
